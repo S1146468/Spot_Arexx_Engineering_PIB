@@ -1,0 +1,30 @@
+{
+    "name": "Spot_Arexx_Engineering_Github_2",
+    "version": "0.0.2",
+    "description": "23-06-2023",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "Spot.ts",
+        "Spot.cpp",
+        "shims.d.ts",
+        "enums.d.ts"        
+    ],
+    "testFiles": [
+        
+    ],
+    "public": true,
+    "targetVersions": {
+        "target": "5.1.11",
+        "targetId": "microbit",
+        "pxt": "8.6.17"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
