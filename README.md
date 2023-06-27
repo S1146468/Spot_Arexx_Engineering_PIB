@@ -15,7 +15,8 @@ To use this extention you need to create a new project or open an exsting projec
 * Click on **New Project**
 * Give your project a name
 * Click on the gearwheel then click on **Extentions**
-* search for **https://github.com/** and import
+* Search for **https://github.com/S1146468/Spot_Arexx_Engineering_Github_2.git** and import it
+* You can now use this extention
 
 ## Edit this project ![Build status badge](https://github.com//workflows/MakeCode/badge.svg)
 
