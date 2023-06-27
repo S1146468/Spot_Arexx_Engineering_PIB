@@ -6,7 +6,7 @@ The goals of this project are to make programming the robot dog fun and easy for
 
 In this file I will explain the following things:
 * [How to use this extention](README.md#how-to-use-this-extention)
-* 
+* [How to edit this extention](README.md#how-to-edit-this-extention)
 
 ## How to use this extention
 
@@ -23,6 +23,7 @@ To use this extention you need to create a new project or open an exsting projec
 ## How to edit this extention
 
 To edit this extention you will need to install the following programsin the following order:
+* [Node.JS](https://nodejs.org/en)
 * [Yotta (follow manual install for Windows)](http://docs.yottabuild.org/#installing-on-windows)
 * [SRecord 1.64 and move it to C:\ ](https://sourceforge.net/projects/srecord/files/srecord-win32/1.64/)
 * [Visual Studio and/or the C++ toolchains](https://visualstudio.microsoft.com/downloads/)
@@ -30,5 +31,6 @@ To edit this extention you will need to install the following programsin the fol
 
 Also, make sure you add these to your Path:
 > C:\Python27\Scripts
+>
 > C:\srecord_dir
 
