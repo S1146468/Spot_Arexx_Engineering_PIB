@@ -12,13 +12,13 @@ In this file I will explain the following things:
 
 To use this extention you need to create a new project or open an exsting project.
 
-* Go to [Microsoft MakeCode for Micro:Bit](https://makecode.microbit.org/)
-* Sign in or create an account to be sure that your projects will be saved
-* Click on **New Project**
-* Give your project a name
-* Click on the gearwheel then click on **Extentions**
-* Search for **https://github.com/S1146468/Spot_Arexx_Engineering_Github_2.git** and import it
-* You can now use this extention
+1. Go to [Microsoft MakeCode for Micro:Bit](https://makecode.microbit.org/)
+2. Sign in or create an account to be sure that your projects will be saved
+3. Click on **New Project**
+4. Give your project a name
+5. Click on the gearwheel then click on **Extentions**
+6. Search for **https://github.com/S1146468/Spot_Arexx_Engineering_Github_2.git** and import it
+7. You can now use this extention
 
 ## How to edit this extention
 
