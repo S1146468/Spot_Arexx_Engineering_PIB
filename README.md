@@ -4,7 +4,9 @@ This repository is made for a SPOT prototype for Arexx Engineering.
 Spot is a fun robot dog that uses an Micro:Bit V2.0 as it's brain.
 The goals of this project are to make programming the robot dog fun and easy for children to do.
 
-In this file I will explain how you can use this extention and how you can edit and compile the code yourself.
+In this file I will explain the following things:
+* [How to use this extention](https://github.com/S1146468/Spot_Arexx_Engineering_Github_2/blob/main/README.md#how-to-use-this-extention)
+* 
 
 ## How to use this extention
 
@@ -18,22 +20,16 @@ To use this extention you need to create a new project or open an exsting projec
 * Search for **https://github.com/S1146468/Spot_Arexx_Engineering_Github_2.git** and import it
 * You can now use this extention
 
-## Edit this project ![Build status badge](https://github.com//workflows/MakeCode/badge.svg)
+## How to edit this extention
 
-To edit this repository in MakeCode.
+To edit this extention you will need to install the following programsin the following order:
+* [Yotta (follow manual install for Windows)](http://docs.yottabuild.org/#installing-on-windows)
+* [SRecord 1.64 and move it to C:\ ](https://sourceforge.net/projects/srecord/files/srecord-win32/1.64/)
+* [Visual Studio and/or the C++ toolchains](https://visualstudio.microsoft.com/downloads/)
+* []
 
-* open []()
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/** and click import
-
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com//raw/master/.github/makecode/blocks.png)
-
-#### Metadata (used for search, rendering)
-
-* for PXT/
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+Also, make sure you add these to your Path:
+''
+C:\Python27\Scripts
+C:\srecord_dir
+''
