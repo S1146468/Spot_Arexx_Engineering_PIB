@@ -6,7 +6,7 @@ The goals of this project are to make programming the robot dog fun and easy for
 
 In this file I will explain how you can use this extention and how you can edit and compile the code yourself.
 
-## How to use this extention on **https://makecode.microbit.org/**
+## How to use this extention
 
 To use this extention you need to create a new project or open an exsting project.
 
