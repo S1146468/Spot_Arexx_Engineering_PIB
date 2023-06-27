@@ -227,7 +227,7 @@ namespace Spot {
      */
     //%
     void Init_Spot_cpp() {
-        FrontLeft.init_servo(LegJointID::ShoulderX, P_LF_3, 1.0f, 55.0f, 125.0f);
+        FrontLeft.init_servo(LegJointID::ShoulderX, P_LF_3, 9.0f, 55.0f, 125.0f);
         FrontLeft.init_servo(LegJointID::ShoulderY, P_LF_1, -11.0f, 45.0f, 135.0f);
         FrontLeft.init_servo(LegJointID::Knee, P_LF_2, -5.0f, 35.0f, 120.0f);
 
@@ -235,11 +235,11 @@ namespace Spot {
         FrontRight.init_servo(LegJointID::ShoulderY, P_RF_1, -6.0f, 45.0f, 135.0f);
         FrontRight.init_servo(LegJointID::Knee, P_RF_2, 0.0f, 60.0f, 145.0f);
 
-        BackLeft.init_servo(LegJointID::ShoulderX, P_LR_3, 7.0f, 55.0f, 125.0f);
+        BackLeft.init_servo(LegJointID::ShoulderX, P_LR_3, 8.0f, 55.0f, 125.0f);
         BackLeft.init_servo(LegJointID::ShoulderY, P_LR_2, -3.0f, 45.0f, 135.0f);
         BackLeft.init_servo(LegJointID::Knee, P_LR_1, -9.0f, 35.0f, 120.0f);
 
-        BackRight.init_servo(LegJointID::ShoulderX, P_RR_2, -12.0f, 55.0f, 125.0f);
+        BackRight.init_servo(LegJointID::ShoulderX, P_RR_2, -8.0f, 55.0f, 125.0f);
         BackRight.init_servo(LegJointID::ShoulderY, P_RR_3, -11.0f, 45.0f, 135.0f);
         BackRight.init_servo(LegJointID::Knee, P_RR_1, 7.0f, 60.0f, 145.0f);
 

@@ -1,13 +1,20 @@
+# Arexx Engineering SPOT
 
-> Open this page at [https://.github.io//](https://.github.io//)
+This repository is made for a SPOT prototype for Arexx Engineering.
+Spot is a fun robot dog that uses an Micro:Bit V2.0 as it's brain.
+The goals of this project are to make programming the robot dog fun and easy for children to do.
 
-## Use as Extension
+In this file I will explain how you can use this extention and how you can edit and compile the code yourself.
 
-This repository can be added as an **extension** in MakeCode.
+## How to use this extention
 
-* open []()
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
+To use this extention you need to create a new project or open an exsting project.
+
+* Go to [Microsoft MakeCode for Micro:Bit](https://makecode.microbit.org/)
+* Sign in or create an account to be sure that your projects will be saved
+* Click on **New Project**
+* Give your project a name
+* Click on the gearwheel then click on **Extentions**
 * search for **https://github.com/** and import
 
 ## Edit this project ![Build status badge](https://github.com//workflows/MakeCode/badge.svg)
