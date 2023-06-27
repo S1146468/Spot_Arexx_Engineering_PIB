@@ -1,7 +1,4 @@
-
-> Open this page at [https://.github.io//](https://.github.io//)
-
-## Use as Extension
+# Arexx Engineering SPOT
 
 This repository can be added as an **extension** in MakeCode.
 
