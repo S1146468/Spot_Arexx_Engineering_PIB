@@ -1,5 +1,11 @@
 # Arexx Engineering SPOT
 
+This repository is made for a SPOT prototype for Arexx Engineering.
+Spot is a fun robot dog that uses an Micro:Bit V2.0 as it's brain.
+The goals of this project are to make programming the robot dog fun and easy for children to do.
+
+In this file I will explain how you can use this extention and how you can edit and compile the code yourself.
+
 ## How to use this extention on **https://makecode.microbit.org/**
 
 This repository can be added as an **extension** in MakeCode.
