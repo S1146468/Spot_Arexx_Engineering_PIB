@@ -32,6 +32,8 @@ To edit this extention you will need to install the following programsin the fol
 Also, make sure you add these to your Path:
 ```
 C:\Python27\Scripts
+```
+```
 C:\srecord_dir
 ```
 
