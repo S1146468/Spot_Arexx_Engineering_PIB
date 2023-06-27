@@ -5,7 +5,7 @@ Spot is a fun robot dog that uses an Micro:Bit V2.0 as it's brain.
 The goals of this project are to make programming the robot dog fun and easy for children to do.
 
 In this file I will explain the following things:
-* [How to use this extention](https://github.com/S1146468/Spot_Arexx_Engineering_Github_2/blob/main/README.md#how-to-use-this-extention)
+* [How to use this extention](README.md#how-to-use-this-extention)
 * 
 
 ## How to use this extention
