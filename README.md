@@ -1,5 +1,7 @@
 # Arexx Engineering SPOT
 
+## How to use this extention on **https://makecode.microbit.org/**
+
 This repository can be added as an **extension** in MakeCode.
 
 * open []()
