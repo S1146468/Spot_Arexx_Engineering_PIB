@@ -23,7 +23,7 @@ To use this extension you need to create a new project or open an existing proje
 3. Click on **New Project**
 4. Give your project a name
 5. Click on the gearwheel then click on **Extensions**
-6. Search for **https://github.com/S1146468/Spot_Arexx_Engineering_Github_2.git** and import it
+6. Search for **https://github.com/S1146468/Spot_Arexx_Engineering_PIB.git** and import it
 7. You can now use this extension
 
 
@@ -129,10 +129,10 @@ C:/Users/YOUR_USERNAME
 cd makecode/pxt-microbit/projects
 ```
 
-3. Clone the Spot_Arexx_Engineering_Github_2 repository to the projects folder
+3. Clone the Spot_Arexx_Engineering_PIB repository to the projects folder
 ```
-git clone https://github.com/S1146468/Spot_Arexx_Engineering_Github_2
-cd Spot_Arexx_Engineering_Github_2
+git clone https://github.com/S1146468/Spot_Arexx_Engineering_PIB
+cd Spot_Arexx_Engineering_PIB
 ```
 
 4. Connect the library to the file structure

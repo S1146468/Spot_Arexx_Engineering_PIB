@@ -1,7 +1,7 @@
 {
-    "name": "Spot_Arexx_Engineering_Github_2",
-    "version": "0.0.2",
-    "description": "23-06-2023",
+    "name": "Spot_Arexx_Engineering_PIB",
+    "version": "1.0.2",
+    "description": "28-06-2023",
     "license": "MIT",
     "dependencies": {
         "core": "*"

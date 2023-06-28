@@ -1,2 +1,2 @@
 Spot.Init_Spot();
-// Spot.Demo();
+Spot.Demo();
