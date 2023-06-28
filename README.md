@@ -153,4 +153,29 @@ pxt
 
 ## Making custom blocks
 
-The useable blocks are defined in [Spot.ts](Spot.ts)
+The useable blocks are defined in [Spot.ts](Spot.ts). 
+For more information about defining your own blocks pleas visit [Defining blocks](https://makecode.com/defining-blocks).
+
+The complete functionality of the movement of Spot is defined in [Spot.cpp](Spot.cpp) and is then linked via a shim to Static TypeScript.
+
+
+### Controlling the movement of Spot
+
+To be able to control the legs of Spot I made an inverse kinamatic model that calculates all the servo angles of a given leg to make moving the leg easier.
+The inverse kinamatic model needs to know the X, Y, Z, Pitch, Roll and Yaw positions and the corrosponding leg ID.
+
+The code for moving all the legs to a certain position looks as follows:
+```C++
+SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
+SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
+SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
+SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
+DataProcessorKinamatics(int speed);
+```
+
+- X is for left to right
+- Y is for forward and backward
+- Z is for up and down
+- Pitch rotates over the X-axis
+- Roll rotates over the Y-axis
+- Yaw rotates over the Z-axis
