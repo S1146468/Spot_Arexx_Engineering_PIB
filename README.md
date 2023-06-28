@@ -7,7 +7,10 @@ The goal of this project is to make programming the robot dog fun and easy for c
 In this file I will explain the following things:
 * [How to use this extention](README.md#how-to-use-this-extention)
 * [How to edit this extention](README.md#how-to-edit-this-extention)
-* [Making custom blocks](README.md#making-custum-blocks)
+    * [Installing the nessisairly programs](README.md#installing-the-nessisairly-programs)
+    * [Setting up the folder structure](README.md#setting-up-the-folder-structure)
+    * [How to open and compile the project](README.md#how-to-open-and-compile-the-project)
+* [Making custom blocks](README.md#making-custom-blocks)
 
 
 ## How to use this extention
@@ -150,4 +153,4 @@ pxt
 
 ## Making custom blocks
 
-The useable blocks are defined in **Spot.ts**
+The useable blocks are defined in **Spot_Arexx_Engineering_Github_2/Spot.ts**
