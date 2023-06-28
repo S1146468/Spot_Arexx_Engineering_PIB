@@ -218,12 +218,12 @@ Leg BackRight(LegID::BackRightID);
 namespace Spot {
     void Walk_cpp(directions direction, int speed, int distance);
     void Turn_cpp(directions direction, int speed, int angle);
-    void SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
-	void DataProcessorKinamatics(int speed);
-	void InverseKinamaticModel(float* outputArray, float* inputArray, int leg_ID);
+    void SetDataForKinematics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
+	void DataProcessorKinematics(int speed);
+	void InverseKinematicModel(float* outputArray, float* inputArray, int leg_ID);
 
     /**
-     * Inizialize Spot
+     * Initialize Spot
      */
     //%
     void Init_Spot_cpp() {
@@ -255,158 +255,158 @@ namespace Spot {
         int speed = 5;
         int length = 5;
         float distance = 20.0f;
-        SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-        SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-        SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-        SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-        DataProcessorKinamatics(speed);
+        SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+        SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+        SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+        SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+        DataProcessorKinematics(speed);
         for (int i = 0; i < length; i++)
         {
-            SetDataForKinamatics(0.0f, 0.0f, distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, -distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, -distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, -distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, -distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
+            SetDataForKinematics(0.0f, 0.0f, distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, -distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, -distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, -distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, -distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
         }
         sleep_us(1000000);
         
         for (int i = 0; i < length; i++)
         {
-            SetDataForKinamatics(0.0f, -distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, -distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, -distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, -distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
+            SetDataForKinematics(0.0f, -distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, -distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, -distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, -distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
         }
         sleep_us(1000000);
 
         for (int i = 0; i < length; i++)
         {
-            SetDataForKinamatics(-distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(-distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(-distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(-distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
+            SetDataForKinematics(-distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(-distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(-distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(-distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
         }
         sleep_us(1000000);
 
         for (int i = 0; i < length; i++)
         {
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, distance, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, distance, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, distance, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, distance, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, -distance, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, -distance, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, -distance, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, -distance, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, distance, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, distance, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, distance, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, distance, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, -distance, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, -distance, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, -distance, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, -distance, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
         }
         sleep_us(1000000);
 
         for (int i = 0; i < length; i++)
         {
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, distance, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, distance, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, distance, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, distance, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, -distance, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, -distance, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, -distance, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, -distance, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, distance, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, distance, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, distance, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, distance, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, -distance, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, -distance, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, -distance, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, -distance, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
         }
         sleep_us(1000000);
 
         for (int i = 0; i < length; i++)
         {
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, distance, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, distance, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, distance, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, distance, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -distance, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -distance, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -distance, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -distance, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, distance, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, distance, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, distance, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, distance, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -distance, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -distance, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -distance, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -distance, LegID::BackRightID);
+            DataProcessorKinematics(speed);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);
         }
 
         sleep_us(1000000);
@@ -429,11 +429,11 @@ namespace Spot {
         Turn_cpp(directions::left, 5, 180);
         sleep_us(1000000);
 
-        SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-        SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-        SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-        SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-        DataProcessorKinamatics(speed);
+        SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+        SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+        SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+        SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+        DataProcessorKinematics(speed);
     }
     
 
@@ -508,189 +508,189 @@ namespace Spot {
         if (direction == directions::forward)  // Forward
         {
             /*---------------------------------Start sequence step forward begin-----------------------------------*/
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-            DataProcessorKinamatics(speed);     // Front left and back right leg move up
-            SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move forward
-            SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move down
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Move forward
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+            DataProcessorKinematics(speed);     // Front left and back right leg move up
+            SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move forward
+            SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move down
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Move forward
             /*----------------------------------Start sequence step forward end------------------------------------*/
 
 
             /*----------------------------------Full step forward sequence begin-----------------------------------*/
             for (int i = 0; i < amount_of_steps; i++) {
-                SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
-                SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
-                DataProcessorKinamatics(speed);     // Front right and back left leg move up
-                SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move forward
-                SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move down
+                SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
+                SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
+                DataProcessorKinematics(speed);     // Front right and back left leg move up
+                SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move forward
+                SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move down
 
-                SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);   
-                SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-                DataProcessorKinamatics(speed);     // Front left and back right leg move up
-                SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move forward
-                SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move down
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Move forward
+                SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);   
+                SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+                DataProcessorKinematics(speed);     // Front left and back right leg move up
+                SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move forward
+                SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move down
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Move forward
             }
             /*-----------------------------------Full step forward sequence end------------------------------------*/
 
 
             /*----------------------------------End sequence step forward begin------------------------------------*/
-            SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
-            SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
-            DataProcessorKinamatics(speed);     // Front right and back left leg move up
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move forward
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move down
+            SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
+            SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
+            DataProcessorKinematics(speed);     // Front right and back left leg move up
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move forward
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move down
             /*-----------------------------------End sequence step forward end-------------------------------------*/
         }
 
         if (direction == directions::backward)  // Backward
         {
             /*---------------------------------Start sequence step backward begin----------------------------------*/
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-            DataProcessorKinamatics(speed);     // Front left and back right leg move up
-            SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move backward
-            SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move down
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Move back
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+            DataProcessorKinematics(speed);     // Front left and back right leg move up
+            SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move backward
+            SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move down
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Move back
             /*----------------------------------Start sequence step backward end-----------------------------------*/
 
 
             /*---------------------------------Full step backward sequence begin-----------------------------------*/
             for (int i = 0; i < amount_of_steps; i++) {
-                SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
-                SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
-                DataProcessorKinamatics(speed);     // Front right and back left leg move up
-                SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move back
-                SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move down
+                SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
+                SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
+                DataProcessorKinematics(speed);     // Front right and back left leg move up
+                SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move back
+                SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move down
 
-                SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);   
-                SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-                DataProcessorKinamatics(speed);     // Front left and back right leg move up
-                SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move back
-                SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move down
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Move back
+                SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);   
+                SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+                DataProcessorKinematics(speed);     // Front left and back right leg move up
+                SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, -Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move back
+                SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move down
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Move back
             } 
             /*----------------------------------Full step backward sequence end------------------------------------*/
 
 
             /*----------------------------------End sequence step backward begin-----------------------------------*/
-            SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
-            SetDataForKinamatics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
-            DataProcessorKinamatics(speed);     // Front right and back left leg move up
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move back
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move down
+            SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
+            SetDataForKinematics(0.0f, Y_movement_distance, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
+            DataProcessorKinematics(speed);     // Front right and back left leg move up
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move back
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move down
             /*-----------------------------------End sequence step backward end------------------------------------*/
         }
 
         if (direction == directions::left)  // Left
         {
             /*---------------------------------Start sequence step backward begin----------------------------------*/
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-            DataProcessorKinamatics(speed);     // Front left and back right leg move up
-            SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move left
-            SetDataForKinamatics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move down
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(-X_movement_distance, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(-X_movement_distance, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Move left
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+            DataProcessorKinematics(speed);     // Front left and back right leg move up
+            SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move left
+            SetDataForKinematics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move down
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(-X_movement_distance, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(-X_movement_distance, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Move left
             /*----------------------------------Start sequence step backward end-----------------------------------*/
 
 
             /*---------------------------------Full step backward sequence begin-----------------------------------*/
             for (int i = 0; i < amount_of_steps; i++) {
-                SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
-                SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
-                DataProcessorKinamatics(speed);     // Front right and back left leg move up
-                SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move left
-                SetDataForKinamatics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move down
+                SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
+                SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
+                DataProcessorKinematics(speed);     // Front right and back left leg move up
+                SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move left
+                SetDataForKinematics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move down
 
-                SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);   
-                SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-                DataProcessorKinamatics(speed);     // Front left and back right leg move up
-                SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move left
-                SetDataForKinamatics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move down
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Move left
+                SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);   
+                SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+                DataProcessorKinematics(speed);     // Front left and back right leg move up
+                SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move left
+                SetDataForKinematics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move down
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Move left
             }
             /*----------------------------------Full step backward sequence end------------------------------------*/
 
 
             /*----------------------------------End sequence step backward begin-----------------------------------*/
-            SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
-            SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
-            DataProcessorKinamatics(speed);     // Front right and back left leg move up
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move left
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move down
+            SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
+            SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
+            DataProcessorKinematics(speed);     // Front right and back left leg move up
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move left
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move down
             /*-----------------------------------End sequence step backward end------------------------------------*/
         }
 
@@ -698,63 +698,63 @@ namespace Spot {
         if (direction == directions::right)  // Right
         {
             /*---------------------------------Start sequence step backward begin----------------------------------*/
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-            DataProcessorKinamatics(speed);     // Front left and back right leg move up
-            SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move right
-            SetDataForKinamatics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move down
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(X_movement_distance, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(X_movement_distance, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Move left
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+            DataProcessorKinematics(speed);     // Front left and back right leg move up
+            SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move right
+            SetDataForKinematics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move down
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(X_movement_distance, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(X_movement_distance, -Y_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Move left
             /*----------------------------------Start sequence step backward end-----------------------------------*/
 
         
             /*---------------------------------Full step backward sequence begin-----------------------------------*/
             for (int i = 0; i < amount_of_steps; i++) {
-                SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
-                SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
-                DataProcessorKinamatics(speed);     // Front right and back left leg move up
-                SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move left
-                SetDataForKinamatics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move down
+                SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
+                SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
+                DataProcessorKinematics(speed);     // Front right and back left leg move up
+                SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move left
+                SetDataForKinematics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move down
 
-                SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);   
-                SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-                DataProcessorKinamatics(speed);     // Front left and back right leg move up
-                SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move right
-                SetDataForKinamatics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move down
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-                SetDataForKinamatics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Move left
+                SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);   
+                SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+                DataProcessorKinematics(speed);     // Front left and back right leg move up
+                SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(-X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move right
+                SetDataForKinematics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(-X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move down
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+                SetDataForKinematics(X_movement_distance, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Move left
             }
             /*----------------------------------Full step backward sequence end------------------------------------*/
 
 
             /*----------------------------------End sequence step backward begin-----------------------------------*/
-            SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
-            SetDataForKinamatics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
-            DataProcessorKinamatics(speed);     // Front right and back left leg move up
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move right
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move down
+            SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);   
+            SetDataForKinematics(X_movement_distance, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID); 
+            DataProcessorKinematics(speed);     // Front right and back left leg move up
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move right
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move down
             /*-----------------------------------End sequence step backward end------------------------------------*/
         }
     }
@@ -790,63 +790,63 @@ namespace Spot {
         if (direction == directions::left)      // left
         {
             /*-----------------------------------Start sequence turn left begin------------------------------------*/
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-            DataProcessorKinamatics(speed);     // Front left and back right leg move up
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg turn left
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move down
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Turn left
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+            DataProcessorKinematics(speed);     // Front left and back right leg move up
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg turn left
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move down
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Turn left
             /*------------------------------------Start sequence turn left end-------------------------------------*/
 
 
             /*-----------------------------------Full left turn sequence begin-------------------------------------*/
             for (int i = 0; i < (full_turns - 2); i++) {
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);   
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID); 
-                DataProcessorKinamatics(speed);     // Front right and back left leg move up
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg turn left
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move down
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);   
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID); 
+                DataProcessorKinematics(speed);     // Front right and back left leg move up
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg turn left
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move down
                 
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);   
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID); 
-                DataProcessorKinamatics(speed);     // Front left and back right leg move up
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg turn left
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move down
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Turn left
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);   
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID); 
+                DataProcessorKinematics(speed);     // Front left and back right leg move up
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg turn left
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move down
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Turn left
             }
             /*------------------------------------Full left turn sequence end--------------------------------------*/
 
 
             /*------------------------------------End sequence turn left begin-------------------------------------*/
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);   
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID); 
-            DataProcessorKinamatics(speed);     // Front right and back left leg move up
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg turn left
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move down
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);   
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID); 
+            DataProcessorKinematics(speed);     // Front right and back left leg move up
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg turn left
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move down
             /*-------------------------------------End sequence turn left end--------------------------------------*/
         }
        
@@ -854,70 +854,70 @@ namespace Spot {
         if (direction == directions::right)     // right
         {
             /*----------------------------------Start sequence turn right begin------------------------------------*/
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
-            DataProcessorKinamatics(speed);     // Front left and back right leg move up
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg turn left
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Front left and back right leg move down
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-            DataProcessorKinamatics(speed);     // Turn left
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);  
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackRightID); 
+            DataProcessorKinematics(speed);     // Front left and back right leg move up
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg turn left
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Front left and back right leg move down
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+            DataProcessorKinematics(speed);     // Turn left
             /*-----------------------------------Start sequence turn right end-------------------------------------*/
 
 
             /*-----------------------------------Full right turn sequence begin------------------------------------*/
             for (int i = 0; i < (full_turns -2) ; i++) {
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);   
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID); 
-                DataProcessorKinamatics(speed);     // Front right and back left leg move up
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg turn left
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID);
-                DataProcessorKinamatics(speed);     // Front right and back left leg move down
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);   
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID); 
+                DataProcessorKinematics(speed);     // Front right and back left leg move up
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg turn left
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackLeftID);
+                DataProcessorKinematics(speed);     // Front right and back left leg move down
                 
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);   
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID); 
-                DataProcessorKinamatics(speed);     // Front left and back right leg move up
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg turn left
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Front left and back right leg move down
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID);
-                SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
-                DataProcessorKinamatics(speed);     // Turn left
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontLeftID);   
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackRightID); 
+                DataProcessorKinematics(speed);     // Front left and back right leg move up
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg turn left
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, -YAW_movement_angle, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Front left and back right leg move down
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID);
+                SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackRightID);
+                DataProcessorKinematics(speed);     // Turn left
             }
             /*------------------------------------Full right turn sequence end-------------------------------------*/
 
 
             /*------------------------------------End sequence turn left begin-------------------------------------*/
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);   
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID); 
-            DataProcessorKinamatics(speed);     // Front right and back left leg move up
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg turn left
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
-            SetDataForKinamatics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
-            DataProcessorKinamatics(speed);     // Front right and back left leg move down
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::FrontRightID);   
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, YAW_movement_angle, LegID::BackLeftID); 
+            DataProcessorKinematics(speed);     // Front right and back left leg move up
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, -Z_movement_distance, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg turn left
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::FrontRightID);
+            SetDataForKinematics(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, LegID::BackLeftID);
+            DataProcessorKinematics(speed);     // Front right and back left leg move down
             /*-------------------------------------End sequence turn left end--------------------------------------*/
         }
     }
 
-    bool executeFrontleft = false;
+    bool executeFrontLeft = false;
     bool executeFrontRight = false;
-    bool executeBackleft = false;
+    bool executeBackLeft = false;
     bool executeBackRight = false;
 
     float DataFrontLeft[6] = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
@@ -926,7 +926,7 @@ namespace Spot {
     float DataBackRight[6] = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
 
     
-    void SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID) {
+    void SetDataForKinematics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID) {
         if (leg_ID == LegID::FrontLeftID) {
             DataFrontLeft[0] = X;
             DataFrontLeft[1] = Y;
@@ -934,7 +934,7 @@ namespace Spot {
             DataFrontLeft[3] = Pitch;
             DataFrontLeft[4] = Roll;
             DataFrontLeft[5] = Yaw * -1.0f;
-            executeFrontleft = true;
+            executeFrontLeft = true;
         }
         if (leg_ID == LegID::FrontRightID) {
             DataFrontRight[0] = X;
@@ -952,7 +952,7 @@ namespace Spot {
             DataBackLeft[3] = Pitch;
             DataBackLeft[4] = Roll;
             DataBackLeft[5] = Yaw * -1.0f;
-            executeBackleft = true;
+            executeBackLeft = true;
         }
         if (leg_ID == LegID::BackRightID) {
             DataBackRight[0] = X;
@@ -965,7 +965,7 @@ namespace Spot {
         }
     }
     
-    void DataProcessorKinamatics(int speed) {
+    void DataProcessorKinematics(int speed) {
         const int filter_steps = 50;
         const int wait_time_us = (10-speed) * 200;
 
@@ -1002,20 +1002,20 @@ namespace Spot {
 
 
         /*-------------------------Initializations of the varibles and pointers begin--------------------------*/
-        if (executeFrontleft) {
-            InverseKinamaticModel(_targetFrontLeft, FrontLeft_ptr, LegID::FrontLeftID);     // calculate kinamatics
+        if (executeFrontLeft) {
+            InverseKinematicModel(_targetFrontLeft, FrontLeft_ptr, LegID::FrontLeftID);     // calculate kinematics
             FrontLeft.getServoCurrentAngles(_startFrontLeft);                             // getting start values from servo's
         }
         if (executeFrontRight) {
-            InverseKinamaticModel(_targetFrontRight, FrontRight_ptr, LegID::FrontRightID);  // calculate kinamatics
+            InverseKinematicModel(_targetFrontRight, FrontRight_ptr, LegID::FrontRightID);  // calculate kinematics
             FrontRight.getServoCurrentAngles(_startFrontRight);                           // getting start values from servo's
         }
-        if (executeBackleft) {
-            InverseKinamaticModel(_targetBackLeft, BackLeft_ptr, LegID::BackLeftID);        // calculate kinamatics
+        if (executeBackLeft) {
+            InverseKinematicModel(_targetBackLeft, BackLeft_ptr, LegID::BackLeftID);        // calculate kinematics
             BackLeft.getServoCurrentAngles(_startBackLeft);                               // getting start values from servo's
         }
         if (executeBackRight) {
-            InverseKinamaticModel(_targetBackRight, BackRight_ptr, LegID::BackRightID);     // calculate kinamatics
+            InverseKinematicModel(_targetBackRight, BackRight_ptr, LegID::BackRightID);     // calculate kinematics
             BackRight.getServoCurrentAngles(_startBackRight);                             // getting start values from servo's
         }
         /*--------------------------Initializations of the varibles and pointers end---------------------------*/
@@ -1023,7 +1023,7 @@ namespace Spot {
 
         /*-------------------------------Filer all values to the servo's begin---------------------------------*/
         for (int i = 0; i < filter_steps; i++) {
-            if (executeFrontleft) {
+            if (executeFrontLeft) {
                 _currentFrontLeft[0] = i * (_targetFrontLeft[0] - _startFrontLeft[0]) / (filter_steps - 1) + _startFrontLeft[0];
                 _currentFrontLeft[1] = i * (_targetFrontLeft[1] - _startFrontLeft[1]) / (filter_steps - 1) + _startFrontLeft[1];
                 _currentFrontLeft[2] = i * (_targetFrontLeft[2] - _startFrontLeft[2]) / (filter_steps - 1) + _startFrontLeft[2];
@@ -1035,7 +1035,7 @@ namespace Spot {
                 _currentFrontRight[2] = i * (_targetFrontRight[2] - _startFrontRight[2]) / (filter_steps - 1) + _startFrontRight[2];
                 FrontRight.moveLeg(_currentFrontRight);
             }
-            if (executeBackleft) {
+            if (executeBackLeft) {
                 _currentBackLeft[0] = i * (_targetBackLeft[0] - _startBackLeft[0]) / (filter_steps - 1) + _startBackLeft[0];
                 _currentBackLeft[1] = i * (_targetBackLeft[1] - _startBackLeft[1]) / (filter_steps - 1) + _startBackLeft[1];
                 _currentBackLeft[2] = i * (_targetBackLeft[2] - _startBackLeft[2]) / (filter_steps - 1) + _startBackLeft[2];
@@ -1052,13 +1052,13 @@ namespace Spot {
         }
         /*--------------------------------Filer all values to the servo's end----------------------------------*/
 
-        if (executeFrontleft) {
+        if (executeFrontLeft) {
             FrontLeft.setNewPosition(FrontLeft_ptr);                                // Set new position for front left leg
         }
         if (executeFrontRight) {
             FrontRight.setNewPosition(FrontRight_ptr);                              // Set new position for front right leg
         }
-        if (executeBackleft) {
+        if (executeBackLeft) {
             BackLeft.setNewPosition(BackLeft_ptr);                                  // Set new position for back left leg
         }
         if (executeBackRight) {
@@ -1072,9 +1072,9 @@ namespace Spot {
             DataBackLeft[i] = 0.0f;
             DataBackRight[i] = 0.0f;
         }
-        executeFrontleft = false;
+        executeFrontLeft = false;
         executeFrontRight = false;
-        executeBackleft = false;
+        executeBackLeft = false;
         executeBackRight = false;
         FrontLeft_ptr = {};
         FrontRight_ptr = {};
@@ -1083,7 +1083,7 @@ namespace Spot {
         /*---------------------------------------Clear input array end-----------------------------------------*/
     }
         
-    void InverseKinamaticModel(float* outputArray, float* inputArray, int leg_ID) {
+    void InverseKinematicModel(float* outputArray, float* inputArray, int leg_ID) {
         /*------------------------------------------Constants begin--------------------------------------------*/
         const float _PI = 3.14159265359f;
 

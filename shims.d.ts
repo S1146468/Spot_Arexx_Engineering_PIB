@@ -6,7 +6,7 @@
 declare namespace Spot {
 
     /**
-     * Inizialize Spot
+     * Initialize Spot
      */
     //% shim=Spot::Init_Spot_cpp
     function Init_Spot_cpp(): void;

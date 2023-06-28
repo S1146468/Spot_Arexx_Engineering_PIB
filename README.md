@@ -5,37 +5,37 @@ Spot is a fun robot dog that uses an Micro:Bit V2.0 as it's brain.
 The goal of this project is to make programming the robot dog fun and easy for children to do.
 
 In this file I will explain the following things:
-* [How to use this extention](README.md#how-to-use-this-extention)
-* [How to edit this extention](README.md#how-to-edit-this-extention)
-    * [Installing the nessisairly programs](README.md#installing-the-nessisairly-programs)
+* [How to use this extension](README.md#how-to-use-this-extension)
+* [How to edit this extension](README.md#how-to-edit-this-extension)
+    * [Installing the necessarily programs](README.md#installing-the-necessarily-programs)
     * [Setting up the folder structure](README.md#setting-up-the-folder-structure)
     * [How to open and compile the project](README.md#how-to-open-and-compile-the-project)
 * [Making custom blocks](README.md#making-custom-blocks)
     * [Controlling the movement of Spot](README.md#controlling-the-movement-of-spot)
 
 
-## How to use this extention
+## How to use this extension
 
-To use this extention you need to create a new project or open an exsisting project.
+To use this extension you need to create a new project or open an existing project.
 
 1. Go to [Microsoft MakeCode for Micro:Bit](https://makecode.microbit.org/)
 2. Sign in or create an account to be sure that your projects will be saved
 3. Click on **New Project**
 4. Give your project a name
-5. Click on the gearwheel then click on **Extentions**
+5. Click on the gearwheel then click on **Extensions**
 6. Search for **https://github.com/S1146468/Spot_Arexx_Engineering_Github_2.git** and import it
-7. You can now use this extention
+7. You can now use this extension
 
 
-## How to edit this extention
+## How to edit this extension
 
 This project is built on the [pxt-microbit repository](https://github.com/microsoft/pxt-microbit.git).
-In order to compile the project, you first need to setup an local developement envirement, which when set up correctly will allow you to edit and compile the project using a CLI.
+In order to compile the project, you first need to setup an local development environment, which when set up correctly will allow you to edit and compile the project using a CLI.
 
 
-### Installing the nessisairly programs
+### Installing the necessarily programs
 
-To start setting up the enviroument you need to install the following programs in the following order:
+To start setting up the environment you need to install the following programs in the following order:
 
 1. [Node.js 8.9.4 or higher](https://nodejs.org/en)
 2. [Yotta (follow manual install for Windows)](http://docs.yottabuild.org/#installing-on-windows)
@@ -146,7 +146,7 @@ pxt install
 code .
 ```
 
-6. To complile the project 
+6. To compile the project 
 ``` 
 pxt
 ```
@@ -162,8 +162,8 @@ The complete functionality of the movement of Spot is defined in [Spot.cpp](Spot
 
 ### Controlling the movement of Spot
 
-To be able to control the legs of Spot I made an inverse kinamatic model that calculates all the servo angles of a given leg to make moving the leg easier.
-The inverse kinamatic model needs to know the X, Y, Z, Pitch, Roll and Yaw positions and the corrosponding leg ID.
+To be able to control the legs of Spot I made an inverse kinematic model that calculates all the servo angles of a given leg to make moving the leg easier.
+The inverse kinematic model needs to know the X, Y, Z, Pitch, Roll and Yaw positions and the corresponding leg ID.
 
 - X is for left to right
 - Y is for forward and backward
@@ -174,13 +174,13 @@ The inverse kinamatic model needs to know the X, Y, Z, Pitch, Roll and Yaw posit
 
 The code for moving all the legs to a certain position looks as follows:
 ```C++
-SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
-SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
-SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
-SetDataForKinamatics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
-DataProcessorKinamatics(int speed);
+SetDataForKinematics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
+SetDataForKinematics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
+SetDataForKinematics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
+SetDataForKinematics(float X, float Y, float Z, float Pitch, float Roll, float Yaw, int leg_ID);
+DataProcessorKinematics(int speed);
 ```
 
 For an example og how to use it go to [Spot.cpp](Spot.cpp#L254)
 
-If you dont need to move a sertain leg go to [Spot.cpp](Spot.cpp#L511) for an example.
+If you don't need to move a certain leg go to [Spot.cpp](Spot.cpp#L511) for an example.
