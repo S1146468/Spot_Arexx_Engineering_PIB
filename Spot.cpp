@@ -51,15 +51,6 @@ enum LegJointID {
     Knee = 0xC0
 };
 
-enum registers {
-    walk_forward = 0x01,
-    walk_backward = 0x02,
-    walk_left = 0x03,
-    walk_right = 0x04,
-    turn_left = 0x05,
-    turn_right = 0x06
-};
-
 enum directions {
     forward = 0x01,
     backward = 0x02,
@@ -71,8 +62,8 @@ class Servo
 {
 private:
     static bool PCA9685_initialized;
-    const static int I2C_adress = 0x40;	            // i2c address of PCA9685 servo controller
-    const static int I2C_Starting_adress = 0x06;    // first servo address for start byte low
+    const static int I2C_address = 0x40;	            // i2c address of PCA9685 servo controller
+    const static int I2C_Starting_address = 0x06;    // first servo address for start byte low
     const static int Absolute_Min_Servo_Angle = 0;
     const static int Absolute_Max_Servo_Angle = 180;
 
@@ -91,7 +82,7 @@ private:
         DATA[0] = (char)I2C_register;
         DATA[1] = (char)I2C_value;
 
-        if (uBit.i2c.write((uint8_t)this->I2C_adress << 1, (BUFFER_TYPE)DATA, sizeof(DATA), false) == 0) {}
+        if (uBit.i2c.write((uint8_t)this->I2C_address << 1, (BUFFER_TYPE)DATA, sizeof(DATA), false) == 0) {}
     }
 public:
     void initialize(int id, float zeroPointOffset, float minPosition, float maxPosition ) {
@@ -115,11 +106,11 @@ public:
             this->_ServoID = id;
             // Servo register
             // Low-byte start - always 0
-            this->writeI2C(this->I2C_Starting_adress + this->_ServoID * 4 + 0, 0x00);
+            this->writeI2C(this->I2C_Starting_address + this->_ServoID * 4 + 0, 0x00);
 
             // Servo register
             // High-byte start - always 0
-            this->writeI2C(this->I2C_Starting_adress + this->_ServoID * 4 + 1, 0x00);
+            this->writeI2C(this->I2C_Starting_address + this->_ServoID * 4 + 1, 0x00);
             this->Servo_initialized = true;
         }
 
@@ -139,11 +130,11 @@ public:
 
         // Servo register
         // Low byte stop
-        this->writeI2C(this->I2C_Starting_adress + this->_ServoID * 4 + 2, stop & 0xff);
+        this->writeI2C(this->I2C_Starting_address + this->_ServoID * 4 + 2, stop & 0xff);
 
         // Servo register
         // High byte stop
-        this->writeI2C(this->I2C_Starting_adress + this->_ServoID * 4 + 3, stop >> 8);
+        this->writeI2C(this->I2C_Starting_address + this->_ServoID * 4 + 3, stop >> 8);
     }
 
     void setMinMax(float min, float max) {

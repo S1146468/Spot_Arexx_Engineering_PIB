@@ -137,7 +137,6 @@ cd Spot_Arexx_Engineering_Github_2
 
 4. Connect the library to the file structure
 ```
-pxt target microbit
 pxt install
 ```
 

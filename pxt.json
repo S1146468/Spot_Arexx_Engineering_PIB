@@ -11,7 +11,7 @@
         "Spot.ts",
         "Spot.cpp",
         "shims.d.ts",
-        "enums.d.ts"        
+        "enums.d.ts"
     ],
     "testFiles": [
         "Spot_Example.ts"
