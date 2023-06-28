@@ -7,6 +7,8 @@ The goal of this project is to make programming the robot dog fun and easy for c
 In this file I will explain the following things:
 * [How to use this extention](README.md#how-to-use-this-extention)
 * [How to edit this extention](README.md#how-to-edit-this-extention)
+* [Making custum blocks using C++](README.md#making-custum-blocks-using-c++)
+
 
 ## How to use this extention
 
@@ -20,10 +22,12 @@ To use this extention you need to create a new project or open an exsisting proj
 6. Search for **https://github.com/S1146468/Spot_Arexx_Engineering_Github_2.git** and import it
 7. You can now use this extention
 
+
 ## How to edit this extention
 
 This project is built on the [pxt-microbit repository](https://github.com/microsoft/pxt-microbit.git).
 In order to compile the project, you first need to setup an local developement envirement, which when set up correctly will allow you to edit and compile the project using a CLI.
+
 
 ### Installing the nessisairly programs
 
@@ -41,6 +45,7 @@ C:\Python27\Scripts
 ```
 C:\srecord_dir
 ```
+
 
 ### Setting up the folder structure
 
@@ -107,6 +112,7 @@ npm link ../pxt-common-packages
 ```
 
 
+
 ### How to open and compile the project
 
 1. Open the Node.js command prompt and make sure it is set on the following directory
@@ -140,3 +146,6 @@ code .
 ``` 
 pxt
 ```
+
+
+## Making custum blocks using C++
