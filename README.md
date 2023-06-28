@@ -153,4 +153,4 @@ pxt
 
 ## Making custom blocks
 
-The useable blocks are defined in **Spot_Arexx_Engineering_Github_2/Spot.ts**
+The useable blocks are defined in [Spot.ts](Spot.ts)
