@@ -7,7 +7,7 @@ The goal of this project is to make programming the robot dog fun and easy for c
 In this file I will explain the following things:
 * [How to use this extention](README.md#how-to-use-this-extention)
 * [How to edit this extention](README.md#how-to-edit-this-extention)
-* [Making custum blocks using C++](README.md#making-custum-blocks-using-c)
+* [Making custom blocks using C++](README.md#making-custum-blocks-using-c)
 
 
 ## How to use this extention
@@ -148,4 +148,6 @@ pxt
 ```
 
 
-## Making custum blocks using C++
+## Making custom blocks using C++
+
+The useable blocks are defined in **Spot.ts**
