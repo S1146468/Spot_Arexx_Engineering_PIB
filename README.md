@@ -11,6 +11,7 @@ In this file I will explain the following things:
     * [Setting up the folder structure](README.md#setting-up-the-folder-structure)
     * [How to open and compile the project](README.md#how-to-open-and-compile-the-project)
 * [Making custom blocks](README.md#making-custom-blocks)
+    * [Controlling the movement of Spot](README.md#controlling-the-movement-of-spot)
 
 
 ## How to use this extention
@@ -182,6 +183,4 @@ DataProcessorKinamatics(int speed);
 
 For an example og how to use it go to [Spot.cpp](Spot.cpp#L254)
 
-If you dont need to move a sertain leg you can just not include the ```C++ SetDataForKinamatics``` line. [Spot.cpp](Spot.cpp#L511)
-
-
+If you dont need to move a sertain leg go to [Spot.cpp](Spot.cpp#L511) for an example.
